@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -15,10 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 // kakao 로그인을 위한 class
-@Component
+@Service
 @Getter
 @Slf4j
-public class KakaoApi {
+public class KakaoApiService {
 
     @Value("${social.kakao.apikey}")
     private String kakaoApiKey;
