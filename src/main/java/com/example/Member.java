@@ -6,6 +6,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,6 +26,17 @@ public class Member {
 
     @Column(nullable = false, length = 30)
     private String name;
+
+    @Column(nullable = false)
+    private String gender;
+
+    @Column(nullable = false, length = 50)
+    private String job;
+
+    private LocalDate birth;
+
+    @Column(nullable = false)
+    private String loginType;
 
     @CreatedDate
     @Column(updatable = false)
